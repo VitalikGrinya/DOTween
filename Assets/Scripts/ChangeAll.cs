@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class ChangeAll : MonoBehaviour
+public class ChangeAll : DOMetods
 {
     [SerializeField] private Vector3 _position;
     [SerializeField] private Vector3 _rotation;
@@ -12,8 +12,8 @@ public class ChangeAll : MonoBehaviour
 
     private void Start()
     {
-        transform.DOMove(_position, _duration).SetLoops(_repeats,_loopType);
-        transform.DORotate(_rotation, _duration).SetLoops(_repeats,_loopType);
-        transform.DOScale(_scale, _duration).SetLoops(_repeats,_loopType);
+        Move(_position, _duration, _repeats, _loopType);
+        Rotate(_rotation, _duration, _repeats, _loopType);
+        ChangeScale(_scale, _duration, _repeats, _loopType);
     }
 }
