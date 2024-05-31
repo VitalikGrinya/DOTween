@@ -2,12 +2,11 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Information : MonoBehaviour
+public class TransformText : MonoBehaviour
 {
     [SerializeField] private Text _text;
     [SerializeField] private float _duration;
 
-    private Tween _tween;
     private void Start()
     {
         DOTween.Sequence()

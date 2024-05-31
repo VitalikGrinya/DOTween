@@ -1,15 +1,15 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class Capsule : MonoBehaviour
+public class Rotate : MonoBehaviour
 {
-    [SerializeField] private Vector3 _scale;
+    [SerializeField] private Vector3 _rotation;
     [SerializeField] private float _duration;
     [SerializeField] private int _repeats;
     [SerializeField] private LoopType _loopType;
 
     private void Start()
     {
-        transform.DOScale(_scale, _duration).SetLoops(_repeats, _loopType);
+        transform.DORotate(_rotation, _duration).SetLoops(_repeats, _loopType).SetEase(Ease.Linear);
     }
 }

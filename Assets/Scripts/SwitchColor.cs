@@ -1,15 +1,16 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class Cube : MonoBehaviour
+public class SwitchColor : MonoBehaviour
 {
-    [SerializeField] private Vector3 _rotation;
+    [SerializeField] private SpriteRenderer _renderer;
+    [SerializeField] private Color _color;
     [SerializeField] private float _duration;
     [SerializeField] private int _repeats;
     [SerializeField] private LoopType _loopType;
 
     private void Start()
     {
-        transform.DORotate(_rotation, _duration).SetLoops(_repeats, _loopType).SetEase(Ease.Linear);
+        _renderer.DOColor(_color, _duration).SetLoops(_repeats, _loopType);
     }
 }
