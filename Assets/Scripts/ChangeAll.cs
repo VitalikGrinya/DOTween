@@ -10,7 +10,7 @@ public class ChangeAll : DOMetods
     [SerializeField] private int _repeats;
     [SerializeField] private LoopType _loopType;
 
-    private void Start()
+    protected void Start()
     {
         Move(_position, _duration, _repeats, _loopType);
         Rotate(_rotation, _duration, _repeats, _loopType);
